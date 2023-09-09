@@ -1,14 +1,14 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import Card from "./Card"
 import useFetch from "./Hooks/useFetch";
 import "../Styles/styles.css"
+import axios from "axios";
 
 function Body(){
 
   const {data, loading, error} = useFetch("/items?populate=*");
-  
-  console.log(data);
 
     return (
       <>
