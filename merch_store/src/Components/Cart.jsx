@@ -2,6 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { removeItem, resetCart } from "../Redux/cartReducer";
 import { useDispatch } from "react-redux";
+import {loadStripe} from "@stripe/stripe-js";
+import { makeRequest } from "../makeRequests";
+
 
 function Cart() {
   const items = useSelector((state) => state.cart.items);
@@ -26,6 +29,25 @@ function Cart() {
 
     return () => controller.abort();
   };
+
+  const stripePromise = loadStripe(
+    "pk_test_51NmEGSBocVtywriia3FsklGNP6BCgBy50jQs9iRNHax4XqVvtlFP6KdMZbbVFdEfINVpZ3G4SHOEiTCxKzlxJ40300CBWrPNW8"
+  );
+
+  const handlePayment = async() => {
+    try{
+      const stripe = await stripePromise;
+
+      const res = await makeRequest.post("/orders", {
+        items,
+      });
+      await stripe.redirectToCheckout({
+        sessionId: res.data.stripeSession.id,
+      })
+    } catch(err){
+      console.log(err)
+    }
+  }
   //asd
 
   if (items.length > 0) {
@@ -57,7 +79,7 @@ function Cart() {
           </div>
 
           <div className="cartButton">
-            <button className="btnMargin">Checkout</button>
+            <button className="btnMargin" onClick={handlePayment}>Checkout</button>
             <button className="reset btnMargin" onClick={resetHandler}>
               Reset Cart
             </button>
