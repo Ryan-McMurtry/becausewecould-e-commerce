@@ -2,8 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { removeItem, resetCart } from "../Redux/cartReducer";
 import { useDispatch } from "react-redux";
-import {loadStripe} from "@stripe/stripe-js";
 import { makeRequest } from "../makeRequests";
+import { loadStripe } from "@stripe/stripe-js";
+
 
 
 function Cart() {
@@ -37,18 +38,19 @@ function Cart() {
   const handlePayment = async() => {
     try{
       const stripe = await stripePromise;
-
+      
       const res = await makeRequest.post("/orders", {
         items,
       });
+     
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
-      })
+      });
     } catch(err){
-      console.log(err)
+      console.log(err);
     }
   }
-  //asd
+
 
   if (items.length > 0) {
     return (

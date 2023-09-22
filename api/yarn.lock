@@ -1823,6 +1823,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/stripe@^8.0.417":
+  version "8.0.417"
+  resolved "https://registry.npmjs.org/@types/stripe/-/stripe-8.0.417.tgz"
+  integrity sha512-PTuqskh9YKNENnOHGVJBm4sM0zE8B1jZw1JIskuGAPkMB+OH236QeN8scclhYGPA4nG6zTtPXgwpXdp+HPDTVw==
+  dependencies:
+    stripe "*"
+
 "@types/through@*":
   version "0.0.30"
   resolved "https://registry.npmjs.org/@types/through/-/through-0.0.30.tgz"
@@ -7967,7 +7974,7 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
 
-stripe@^13.7.0:
+stripe@*, stripe@^13.7.0:
   version "13.7.0"
   resolved "https://registry.npmjs.org/stripe/-/stripe-13.7.0.tgz"
   integrity sha512-0cbUNl5aDwt5rIZeE/WgyTxZN/PtwyeA5KcVJrHj260tjN4IOo2BZikN+dxhKoeBfI4aSRAd3E5vHRKmjjaSbA==
