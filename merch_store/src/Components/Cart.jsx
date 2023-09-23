@@ -44,10 +44,11 @@ function Cart() {
       });
      
       await stripe.redirectToCheckout({
-        sessionId: res.data.stripeSession.id,
+        sessionId:res.data.stripeSession.id,
       });
     } catch(err){
       console.log(err);
+      
     }
   }
 
