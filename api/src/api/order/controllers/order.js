@@ -33,6 +33,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     
 
     try {
+      //.create isn't registering as a function when taken out of try/catch format
       const session = await stripe.checkout.sessions.create({
         mode: "payment",
         line_items: lineItems,
@@ -51,6 +52,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       
       return { stripeSession: session };
     } catch (err) {
+      //currently throwing a 500 error here
+      //don't know if it's failing to access the stripe server or if the backend api is not receiving data
         ctx.response.status = 500;
         return err;
     }
