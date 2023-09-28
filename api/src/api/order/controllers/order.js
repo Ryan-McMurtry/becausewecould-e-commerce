@@ -33,7 +33,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     
 
     try {
-      //.create isn't registering as a function when taken out of try/catch format
+      //.create isn't registering as a function when taken out of try/catch format.
       const session = await stripe.checkout.sessions.create({
         mode: "payment",
         line_items: lineItems,
