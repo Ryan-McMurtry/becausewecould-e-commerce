@@ -11,6 +11,10 @@ function Cart() {
   const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
+  const stripePromise = loadStripe(
+    "pk_test_51NmEGSBocVtywriia3FsklGNP6BCgBy50jQs9iRNHax4XqVvtlFP6KdMZbbVFdEfINVpZ3G4SHOEiTCxKzlxJ40300CBWrPNW8"
+  );
+
   const totalPrice = () => {
     let total = 0;
     items.forEach((item) => (total += item.quantity * item.price));
@@ -31,9 +35,7 @@ function Cart() {
     return () => controller.abort();
   };
 
-  const stripePromise = loadStripe(
-    "pk_test_51NmEGSBocVtywriia3FsklGNP6BCgBy50jQs9iRNHax4XqVvtlFP6KdMZbbVFdEfINVpZ3G4SHOEiTCxKzlxJ40300CBWrPNW8"
-  );
+
 
   const handlePayment = async() => {
     try{
