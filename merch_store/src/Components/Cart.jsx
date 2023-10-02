@@ -5,8 +5,6 @@ import { useDispatch } from "react-redux";
 import { makeRequest } from "../makeRequests";
 import { loadStripe } from "@stripe/stripe-js";
 
-
-
 function Cart() {
   const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
@@ -35,25 +33,23 @@ function Cart() {
     return () => controller.abort();
   };
 
-
-
-  const handlePayment = async() => {
-    try{
+  const handlePayment = async () => {
+    try {
       const stripe = await stripePromise;
-      
+
       const res = await makeRequest.post("/orders", {
         items,
       });
-     
-      await stripe.redirectToCheckout({
-        sessionId:res.data.stripeSession.id,
-      });
-    } catch(err){
-      console.log(err);
-      
-    }
-  }
 
+      if (stripe !== null) {
+        await stripe.redirectToCheckout({
+          sessionId: res.data.stripeSession.id,
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   if (items.length > 0) {
     return (
@@ -84,7 +80,9 @@ function Cart() {
           </div>
 
           <div className="cartButton">
-            <button className="btnMargin" onClick={handlePayment}>Checkout</button>
+            <button className="btnMargin" onClick={handlePayment}>
+              Checkout
+            </button>
             <button className="reset btnMargin" onClick={resetHandler}>
               Reset Cart
             </button>
