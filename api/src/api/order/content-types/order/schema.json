@@ -16,8 +16,7 @@
       "type": "text"
     },
     "items": {
-      "type": "json",
-      "required": false
+      "type": "json"
     }
   }
 }

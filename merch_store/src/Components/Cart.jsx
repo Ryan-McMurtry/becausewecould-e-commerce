@@ -1,13 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import {Link} from "react-router-dom";
 import { removeItem, resetCart } from "../Redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { makeRequest } from "../makeRequests";
 import { loadStripe } from "@stripe/stripe-js";
 
+
 function Cart() {
   const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
+
 
   const stripePromise = loadStripe(
     "pk_test_51NmEGSBocVtywriia3FsklGNP6BCgBy50jQs9iRNHax4XqVvtlFP6KdMZbbVFdEfINVpZ3G4SHOEiTCxKzlxJ40300CBWrPNW8"
@@ -80,9 +83,9 @@ function Cart() {
           </div>
 
           <div className="cartButton">
-            <button className="btnMargin" onClick={handlePayment}>
-              Checkout
-            </button>
+              <button className="btnMargin" onClick={handlePayment}>
+                Checkout
+              </button>
             <button className="reset btnMargin" onClick={resetHandler}>
               Reset Cart
             </button>
