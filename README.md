@@ -1,6 +1,9 @@
 Full-Stack web application for a personal e-commerce brand using React.js and strapi. 
 
-Currently working on homepage component and checkout functionality using Stripe. 
+Current features: 
+- Can successfully fetch product data from backend server.
+- Full Stripe checkout functionality.
 
-Bugfixes: 
--500 error when sending a request to Stripe servers. Not sure if I'm not getting a response on my backend or from Stripe api specifically.
+To do:
+-Stylize homepage and implement other navbar pages (i.e video page, tour page, etc.)
+-Stylize Stripe checkout page. 
