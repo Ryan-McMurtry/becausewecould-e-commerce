@@ -45,6 +45,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         
         console.log("awaiting service")
 
+        //it was a syntax issue...
         const entry = await strapi.service("api::order.order").create({
           data: {
             stripeId: session.id,
