@@ -83,9 +83,10 @@ function Cart() {
           </div>
 
           <div className="cartButton">
-              <button className="btnMargin" onClick={handlePayment}>
-                Checkout
-              </button>
+            <Link onClick={handlePayment}>
+              <button className="btnMargin">Checkout</button>
+            </Link>
+
             <button className="reset btnMargin" onClick={resetHandler}>
               Reset Cart
             </button>
