@@ -17,11 +17,11 @@ function Bottoms() {
   return (
     <>
       <div className="sub_categories">
-          <div className="indivCards">
-            {filterArr?.map((item) => (
-              <Card item={item} key={item.id} />
-            ))}
-          </div>
+        <div className="indivCards">
+          {loading
+            ? "Loading"
+            : filterArr?.map((item) => <Card item={item} key={item.id} />)}
+        </div>
       </div>
     </>
   );

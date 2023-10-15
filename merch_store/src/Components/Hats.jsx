@@ -18,7 +18,7 @@ function Hats() {
     <>
       <div className="sub_categories">
         <div className="indivCards">
-          {filterArr?.map((item) => (
+          {loading? "Loading" : filterArr?.map((item) => (
             <Card item={item} key={item.id} />
           ))}
         </div>

@@ -19,9 +19,9 @@ function Outerwear() {
       <div className="sub_categories">
         <div>
           <div className="indivCards">
-            {filterArr?.map((item) => (
-              <Card item={item} key={item.id} />
-            ))}
+            {loading
+              ? "Loading"
+              : filterArr?.map((item) => <Card item={item} key={item.id} />)}
           </div>
         </div>
       </div>

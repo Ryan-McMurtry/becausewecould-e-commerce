@@ -13,7 +13,7 @@ function Body(){
       <>
         <div>
           <div className="indivCards">
-            {data?.map((item) => (
+            {loading ? "Loading..." : data?.map((item) => (
               <Card item={item} key={item.id} />
             ))}
           </div>
