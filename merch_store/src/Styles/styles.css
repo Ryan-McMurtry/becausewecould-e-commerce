@@ -264,3 +264,13 @@
   padding-left: 1em;
   padding-right: 1em;
 }
+
+
+/* FEATURED SECTION */
+
+.featuredTitle {
+  position: absolute;
+  left: 16em;
+  margin-bottom: 2em;
+}
+
