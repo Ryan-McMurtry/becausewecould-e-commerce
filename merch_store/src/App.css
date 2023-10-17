@@ -1,19 +1,16 @@
-
 .App {
   text-align: center;
 }
 
-body{
+body {
   background-color: rgba(253, 251, 249, 0.856);
   background-image: url("./images/sf3-3rd-strike-yang-stage-hongkong.gif");
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
-  opacity: .96;
+  opacity: 0.98;
 }
-
-
-
 
 .App-header {
   background-color: #282c34;
@@ -29,7 +26,6 @@ body{
 .App-link {
   color: #61dafb;
 }
-
 
 @keyframes App-logo-spin {
   from {

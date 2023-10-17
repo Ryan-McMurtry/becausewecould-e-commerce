@@ -39,6 +39,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/item/:itemId" element={<ItemLayout />} />
         </Routes>
+
     </div>
   );
 }
