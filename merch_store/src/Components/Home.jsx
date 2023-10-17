@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "./Card";
 import useFetch from "./Hooks/useFetch";
-import bgVid from "../images/sf3-3rd-strike-yang-stage-hongkong.gif";
 import "../Styles/styles.css";
 
 function Home() {
