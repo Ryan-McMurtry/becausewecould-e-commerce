@@ -1,5 +1,13 @@
 /* NAVBAR & HEADER */
 
+.headerStyle {
+  font-family: 'VT323', monospace;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(88, 100, 136, 0));
+  padding: .5em;
+}
+
+
+
 .navbarStyle {
   display: flex;
   width: auto;
@@ -7,6 +15,7 @@
 }
 
 .bannerStyle {
+  font-size: 1.2em;
   margin: 1em;
   color: white;
 }
@@ -14,6 +23,7 @@
 .bannerStyle:hover {
   color: rgb(237, 254, 255);
 }
+
 
 .btnStyle {
   font-size: 1.2em;
@@ -69,6 +79,7 @@
   border-style: ridge;
   border-color: rgb(158, 157, 157);
   margin: 0.7em;
+
 }
 
 .fontStyle {

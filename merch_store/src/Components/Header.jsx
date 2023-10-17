@@ -17,7 +17,7 @@ function Header() {
 
   if (urlArr.includes("item") || urlArr.includes("shop")) {
     return (
-      <header className="jumbotron bg-secondary window">
+      <header className="jumbotron headerStyle">
         <div className="container text-white">
           <h1 className="display-4 text-center">
             <a className="bannerStyle" href="/">
@@ -102,7 +102,7 @@ function Header() {
   } else {
     return (
       // Header
-      <header className="jumbotron bg-secondary window">
+      <header className="jumbotron headerStyle">
         <div className="container text-white">
           <h1 className="display-4 text-center">
             <a className="bannerStyle" href="/">

@@ -17,26 +17,28 @@ import Bottoms from "./Components/Bottoms"
 import Sweatshirts from "./Components/Sweatshirts";
 import Hats from "./Components/Hats";
 
+
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes className="app-routes">
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/music" element={<ShopMusicPage />} />
-        <Route path="/shop/hats" element={<Hats />} />
-        <Route path="/shop/outerwear" element={<Outerwear />} />
-        <Route path="/shop/t-shirts" element={<Shirts />} />
-        <Route path="/shop/hoodies" element={<Hoodies />} />
-        <Route path="/shop/bottoms" element={<Bottoms />} />
-        <Route path="/shop/sweatshirts" element={<Sweatshirts />} />
-        <Route path="/tour" element={<Tour />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/item/:itemId" element={<ItemLayout />} />
-      </Routes>
+
+        <Header />
+        <Routes className="app-routes">
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/music" element={<ShopMusicPage />} />
+          <Route path="/shop/hats" element={<Hats />} />
+          <Route path="/shop/outerwear" element={<Outerwear />} />
+          <Route path="/shop/t-shirts" element={<Shirts />} />
+          <Route path="/shop/hoodies" element={<Hoodies />} />
+          <Route path="/shop/bottoms" element={<Bottoms />} />
+          <Route path="/shop/sweatshirts" element={<Sweatshirts />} />
+          <Route path="/tour" element={<Tour />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/item/:itemId" element={<ItemLayout />} />
+        </Routes>
     </div>
   );
 }

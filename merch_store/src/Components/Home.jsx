@@ -17,14 +17,7 @@ function Home() {
 
   return (
     <>
-      <div
-        className= "bgVid"
-        style={{
-          backgroundImage: "url(" + bgVid + ")",
-          backgroundSize: "cover",
-        
-        }}
-      >
+
         <div className="container">
           <div className="featured">
             <div className="featuredTitle">
@@ -37,7 +30,6 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
