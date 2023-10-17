@@ -32,6 +32,13 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav merchBtnStyle">
                 <li className="nav-item active">
+                  <a className="nav-link" href="/">
+                    <button className="btnStyle">
+                      Home <span className="sr-only">(current)</span>
+                    </button>
+                  </a>
+                </li>
+                <li className="nav-item active">
                   <a className="nav-link" href="/shop">
                     <button className="btnStyle">
                       All <span className="sr-only">(current)</span>
