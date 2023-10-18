@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./Components/Home";
 import ItemLayout from "./Components/ItemLayout";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import Cart from "./Components/Cart";
 import Tour from "./Components/Tour"; 
 import Videos from "./Components/Videos";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/item/:itemId" element={<ItemLayout />} />
         </Routes>
+        <Footer />
 
     </div>
   );

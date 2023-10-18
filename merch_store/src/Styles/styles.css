@@ -1,8 +1,31 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body {
+  background-color: rgba(253, 251, 249, 0.856);
+  background-image: url("../images/sf3-3rd-strike-yang-stage-hongkong.gif");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.98;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 /* NAVBAR & HEADER */
 
 .headerStyle {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(88, 100, 136, 0));
-  padding: .5em;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(88, 100, 136, 0)
+  );
+  padding: 0.5em;
 }
 
 .navbarStyle {
@@ -12,7 +35,7 @@
 }
 
 .bannerStyle {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.2em;
   margin: 1em;
   color: white;
@@ -21,7 +44,6 @@
 .bannerStyle:hover {
   color: rgb(237, 254, 255);
 }
-
 
 .btnStyle {
   font-size: 1.2em;
@@ -57,6 +79,35 @@
   transform: translateY(4px);
 }
 
+/* FOOTER */
+
+.footer {
+  margin: 80% 0px 20px 0px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1em;
+
+  .left {
+    font-family: "VT323", monospace;
+    display: flex;
+    align-items: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #cbf5ef;
+  }
+
+  .right {
+    .stripeImg {
+      width: 20em;
+    }
+  }
+}
+
 /* ITEM CARDS */
 .card img {
   width: 100%;
@@ -77,7 +128,6 @@
   border-style: ridge;
   border-color: rgb(158, 157, 157);
   margin: 0.7em;
-
 }
 
 .fontStyle {
@@ -160,7 +210,7 @@
 /* SHOPPING CART */
 
 .cart {
-  position:absolute;
+  position: absolute;
   padding: auto;
   height: 100%;
   right: 1px;
@@ -175,17 +225,17 @@
   border-left: solid;
   border-bottom: solid;
   border-width: 0.8em;
-  border-radius: .3em;
+  border-radius: 0.3em;
   border-color: rgb(231, 184, 161);
   background-color: grey;
-  opacity: .95;
+  opacity: 0.95;
 
   animation-duration: 1.5s;
   animation-name: slidein;
 }
 
 @keyframes slidein {
-  from{
+  from {
     margin-left: 80%;
   }
   to {
@@ -193,20 +243,18 @@
   }
 }
 
-
 .cart h1 {
   font-size: 3em;
   font-weight: 510;
   margin: 1em;
 }
 
-.cartContent{
+.cartContent {
   overflow-y: auto;
 }
 
 .cartItem {
   margin-bottom: 2em;
-  
 }
 
 .cartItem img {
@@ -258,7 +306,7 @@
   margin: 1.5em;
 }
 
-.cartAmount{
+.cartAmount {
   font-size: 1.1em;
   color: rgb(230, 100, 100);
 }
@@ -274,11 +322,6 @@
   padding-right: 1em;
 }
 
-
-/* HOMEPAGE */
-
-
-
 /* FEATURED SECTION */
 
 .featuredTitle {
@@ -286,4 +329,3 @@
   left: 16em;
   margin-bottom: 2em;
 }
-
