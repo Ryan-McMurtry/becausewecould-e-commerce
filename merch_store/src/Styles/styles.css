@@ -194,6 +194,14 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.ref-description {
+  border-style: groove;
+  border-color: rgb(87, 84, 84);
+  background-color: rgb(232, 233, 233);
+  border-radius: 7px;
+  padding-top: .5em
+}
+
 .btnFont {
   font-weight: bold;
   font-size: 1.15em;
@@ -301,6 +309,7 @@ body {
 }
 
 .emptyText {
+  font-family: "VT323", monospace;
   font-size: 4em;
   font-weight: 510;
   margin: 1.5em;
