@@ -1,5 +1,4 @@
 import React from "react";
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import Card from "./Card"
 import useFetch from "./Hooks/useFetch";
 import "../Styles/styles.scss"
@@ -7,7 +6,6 @@ import "../Styles/styles.scss"
 function Body(){
 
   const {data, loading, error} = useFetch("/items?populate=*");
-  console.log(data)
 
     return (
       <>

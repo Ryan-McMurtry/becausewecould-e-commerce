@@ -1,10 +1,15 @@
 import React from "react";
+import { useEffect } from "react";
 import Card from "./Card";
 import useFetch from "./Hooks/useFetch";
 import "../Styles/styles.scss";
 
 function Hats() {
   const { data, loading, error } = useFetch("/items?populate=*");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filterArr = [];
   data.filter((item) => {
@@ -18,9 +23,9 @@ function Hats() {
     <>
       <div className="sub_categories">
         <div className="indivCards">
-          {loading? "Loading" : filterArr?.map((item) => (
-            <Card item={item} key={item.id} />
-          ))}
+          {loading
+            ? "Loading"
+            : filterArr?.map((item) => <Card item={item} key={item.id} />)}
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ShoppingCart } from "phosphor-react";
 import useFetch from "./Hooks/useFetch";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -9,7 +9,10 @@ import { addToCart } from "../Redux/cartReducer";
 function MerchDetails() {
   const itemId = useLocation().pathname;
   const locationId = itemId.split("/");
-  // console.log(locationId);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
@@ -56,7 +59,6 @@ function MerchDetails() {
                 data-reflow-variant="199976733_s"
                 data-reflow-quantity="1"
               >
-
                 <div className="ref-product-controls col columnSpacing">
                   <div className="ref-variant">
                     <label className="columnSpacing2">

@@ -381,7 +381,14 @@ body {
 /* FEATURED SECTION */
 
 .featuredTitle {
+  font-family: "VT323", monospace;
+  border-style: groove;
+  border-color: rgb(87, 84, 84);
+  background-color: rgb(232, 233, 233);
+  border-radius: 7px;
+  padding-top: .5em;
   position: absolute;
   left: 16em;
-  margin-bottom: 2em;
+  top: 83.25em;
+
 }

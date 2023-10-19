@@ -1,10 +1,15 @@
 import React from "react";
 import Card from "./Card";
+import { useEffect } from "react";
 import useFetch from "./Hooks/useFetch";
 import "../Styles/styles.scss";
 
 function Sweatshirts() {
   const { data, loading, error } = useFetch("/items?populate=*");
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const filterArr = [];
   data.filter((item) => {
