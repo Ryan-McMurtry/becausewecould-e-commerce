@@ -18,23 +18,22 @@ function Home() {
 
   return (
     <>
+      <div>
+        <Slider />
+      </div>
 
-        <div className="container">
-          <div className="featured">
-            <div className="featuredTitle">
-              <h2>Featured:</h2>
-            </div>
-            <div className="indivCards">
-              {loading
-                ? "Loading"
-                : filterArr?.map((item) => <Card item={item} key={item.id} />)}
-            </div>
+      <div className="container">
+        <div className="featured">
+          <div className="featuredTitle">
+            <h2>Featured:</h2>
+          </div>
+          <div className="indivCards">
+            {loading
+              ? "Loading"
+              : filterArr?.map((item) => <Card item={item} key={item.id} />)}
           </div>
         </div>
-
-        <div>
-          <Slider />
-        </div>
+      </div>
     </>
   );
 }
