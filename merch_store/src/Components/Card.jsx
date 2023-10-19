@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Styles/styles.css";
+import "../Styles/styles.scss";
 
 const Card = ({ item }) => {
   return (
@@ -10,7 +10,7 @@ const Card = ({ item }) => {
           <img
             src={
               process.env.REACT_APP_UPLOAD_URL +
-              item.attributes.img.data.attributes.url
+              item?.attributes?.img.data.attributes?.url
             }
             style={{
               cursor: "pointer",
@@ -18,9 +18,9 @@ const Card = ({ item }) => {
             alt=""
           />
           <div className="priceAndTitle">
-            <h2 className="itemFont">{item?.attributes.title}</h2>
+            <h2 className="itemFont">{item?.attributes?.title}</h2>
             <div className="prices">
-              <h3>${item?.attributes.price}</h3>
+              <h3>${item?.attributes?.price}</h3>
             </div>
           </div>
         </div>

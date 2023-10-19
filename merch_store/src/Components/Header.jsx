@@ -4,7 +4,7 @@ import Cart from "./Cart";
 // import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import "98.css";
-import "../Styles/styles.css";
+import "../Styles/styles.scss";
 import { useSelector } from "react-redux";
 
 function Header() {

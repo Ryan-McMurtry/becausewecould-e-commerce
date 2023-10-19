@@ -2,7 +2,7 @@ import React from "react";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import Card from "./Card"
 import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.css"
+import "../Styles/styles.scss"
 
 function Body(){
 

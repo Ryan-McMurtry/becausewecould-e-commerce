@@ -1,7 +1,9 @@
 import React from "react";
 import Card from "./Card";
 import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.css";
+import Slider from "./Slider";
+
+import "../Styles/styles.scss";
 
 function Home() {
   const { data, loading, error } = useFetch("/items?populate=*");
@@ -28,6 +30,10 @@ function Home() {
                 : filterArr?.map((item) => <Card item={item} key={item.id} />)}
             </div>
           </div>
+        </div>
+
+        <div>
+          <Slider />
         </div>
     </>
   );

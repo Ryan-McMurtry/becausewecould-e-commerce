@@ -2,6 +2,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -330,6 +331,50 @@ body {
   width: 93.75em;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+/* HOMEPAGE */
+
+.slider {
+  margin-top: 20em;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderContainer {
+  width: 300vw;
+  display: flex;
+
+  img{
+    
+    width: 33.33vw;
+    height: 50em;
+    object-fit: contain;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 250px;
+  margin: auto;
+}
+
+.icon img{
+  height: 6em;
+  width: 6em;
+}
+
+.icon img:hover {
+  cursor: pointer
+}
+
+.icon img:active {
+  transform: translateY(4px);
 }
 
 /* FEATURED SECTION */

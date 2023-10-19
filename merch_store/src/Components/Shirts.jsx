@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.css";
+import "../Styles/styles.scss";
 
 function Shirts() {
   const { data, loading, error } = useFetch("/items?populate=*");
