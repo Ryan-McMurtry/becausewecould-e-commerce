@@ -11,7 +11,7 @@ function Shop() {
   
   return (
     <>
-      <div className="container">
+      <div className="container shopList">
         <MerchList />
       </div>
     </>

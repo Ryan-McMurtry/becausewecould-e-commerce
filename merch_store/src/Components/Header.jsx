@@ -19,7 +19,7 @@ function Header() {
     return (
       <header className="jumbotron headerStyle">
         <div className="container text-white">
-          <h1 className="display-4 text-center">
+          <h1 className="display-4">
             <a className="bannerStyle" href="/">
               Because We Could
             </a>
@@ -104,7 +104,7 @@ function Header() {
       // Header
       <header className="jumbotron headerStyle">
         <div className="container text-white">
-          <h1 className="display-4 text-center">
+          <h1 className="display-4">
             <a className="bannerStyle" href="/">
               Because We Could
             </a>
