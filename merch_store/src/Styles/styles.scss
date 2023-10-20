@@ -3,6 +3,7 @@ html {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -336,6 +337,7 @@ body {
 /* HOMEPAGE */
 
 .slider {
+  right: .46em;
   margin-top: 5em;
   margin-bottom: 10em;
   width: 100vw;
