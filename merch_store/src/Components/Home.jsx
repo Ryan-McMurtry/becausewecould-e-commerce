@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import Card from "./Card";
 import useFetch from "./Hooks/useFetch";
 import Slider from "./Slider";
+import ReactVideoPlayer from "./ReactVideoPlayer";
 
 import "../Styles/styles.scss";
 
@@ -41,6 +42,10 @@ function Home() {
               : filterArr?.map((item) => <Card item={item} key={item.id} />)}
           </div>
         </div>
+      </div>
+
+      <div>
+        <ReactVideoPlayer />
       </div>
     </>
   );

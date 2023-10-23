@@ -389,6 +389,16 @@ body {
   transform: translateY(4px);
 }
 
+
+.homeVid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15em;
+  margin-right: 2em;
+
+}
+
 /* FEATURED SECTION */
 
 .featuredTitle {

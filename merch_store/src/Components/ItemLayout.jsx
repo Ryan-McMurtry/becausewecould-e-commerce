@@ -20,7 +20,7 @@ function MerchDetails() {
   const { data, loading, error } = useFetch(
     `/items/${locationId[2]}?populate=*`
   );
-  console.log(data);
+  console.log(data?.attributes?.sub_categories?.data?.attributes?.title);
 
   return (
     <div>
