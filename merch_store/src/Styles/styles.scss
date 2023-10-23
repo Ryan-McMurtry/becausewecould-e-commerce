@@ -389,14 +389,8 @@ body {
   transform: translateY(4px);
 }
 
-
-.homeVid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15em;
-  margin-right: 2em;
-
+.featuredContainer {
+  margin-right: 34.6em;
 }
 
 
@@ -405,7 +399,7 @@ body {
 .videoContainer {
   margin-top: 15em;
   position: absolute;
-  right: 30em;
+  right: 30.1em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -425,6 +419,63 @@ body {
   margin: 0;
 }
 
+.controlContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 85vh;
+}
+
+.topContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 20px;
+}
+
+.midContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBtn {
+  padding: 0 10px;
+  color: white;
+}
+
+.sliderContainer2 {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.controlBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerControls {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  width: 50%;
+}
+
+.secondControl {
+  display: flex;
+  align-items: center;
+}
+
 /* FEATURED SECTION */
 
 .featuredTitle {
@@ -435,7 +486,7 @@ body {
   border-radius: 7px;
   padding-top: .5em;
   position: absolute;
-  left: 16em;
+  left: 15em;
   top: 83.25em;
 
 }

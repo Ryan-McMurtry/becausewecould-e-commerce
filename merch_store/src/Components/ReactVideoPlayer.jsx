@@ -2,6 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "../Styles/styles.scss";
 import { Container } from "@mui/material";
+import Control from "./Control";
 
 const ReactVideoPlayer = () => {
     return (
@@ -16,6 +17,7 @@ const ReactVideoPlayer = () => {
               playing={true}
               muted={true}
             />
+            <Control />
           </div>
         </Container>
       </div>

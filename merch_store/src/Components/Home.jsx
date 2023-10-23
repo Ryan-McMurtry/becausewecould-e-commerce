@@ -31,7 +31,7 @@ function Home() {
         <Slider />
       </div>
 
-      <div className="container">
+      <div className="container featuredContainer">
         <div className="featured">
           <div className="featuredTitle">
             <h2>Featured:</h2>
