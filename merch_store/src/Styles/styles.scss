@@ -397,7 +397,7 @@ body {
 // VIDEO PLAYER
 
 .videoContainer {
-  margin-top: 15em;
+  margin-top: 23em;
   position: absolute;
   right: 30.1em;
   display: flex;
@@ -419,62 +419,6 @@ body {
   margin: 0;
 }
 
-.controlContainer {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  flex-direction: column;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  width: 80vw;
-  height: 85vh;
-}
-
-.topContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5px 20px;
-}
-
-.midContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.iconBtn {
-  padding: 0 10px;
-  color: white;
-}
-
-.sliderContainer2 {
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-}
-
-.controlBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.innerControls {
-  display: flex;
-  padding: 10px 0;
-  align-items: center;
-  width: 50%;
-}
-
-.secondControl {
-  display: flex;
-  align-items: center;
-}
 
 /* FEATURED SECTION */
 
