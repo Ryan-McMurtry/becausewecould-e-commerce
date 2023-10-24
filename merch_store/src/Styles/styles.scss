@@ -399,7 +399,7 @@ body {
 .videoContainer {
   margin-top: 23em;
   position: absolute;
-  right: 30.1em;
+  right: 30.15em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -413,7 +413,8 @@ body {
 }
 
 .player {
-  border: 2px solid;
+  border: 3px ridge;
+  border-color: rgb(86, 102, 104);
   object-fit: cover;
   padding: 0;
   margin: 0;
