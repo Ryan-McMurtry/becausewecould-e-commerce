@@ -3,7 +3,11 @@ Full-Stack web application for a personal e-commerce brand using React.js on the
 Current features: 
 - Can successfully fetch product data from backend server.
 - Full Stripe checkout functionality.
+- Full link and video implementation
 
 To do:
--Stylize homepage and implement other navbar pages (i.e video page, tour page, etc.)
+-Add a next page button for the merch list.
+-Add related products slide to product page.
+-Stylize shopping cart.
+-Change background gif.
 -Stylize Stripe checkout page. 
