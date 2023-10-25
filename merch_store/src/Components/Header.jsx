@@ -46,13 +46,6 @@ function Header() {
                   </a>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="/shop/music">
-                    <button className="btnStyle">
-                      Music <span className="sr-only">(current)</span>
-                    </button>
-                  </a>
-                </li>
-                <li className="nav-item active">
                   <a className="nav-link" href="/shop/hats">
                     <button className="btnStyle">Hats</button>
                   </a>

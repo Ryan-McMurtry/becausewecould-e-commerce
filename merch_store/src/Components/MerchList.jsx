@@ -1,17 +1,19 @@
 import React from "react";
-import Card from "./Card"
+import Card from "./Card";
 import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.scss"
+import "../Styles/styles.scss";
 
-function Body(){
+function Body({ currentItems }){
 
-  const {data, loading, error} = useFetch("/items?populate=*");
+  const { loading } = useFetch("/items?populate=*");
+
+  console.log(currentItems);
 
     return (
       <>
         <div>
           <div className="indivCards">
-            {loading ? "Loading..." : data?.map((item) => (
+            {loading ? "Loading..." : currentItems?.map((item) => (
               <Card item={item} key={item.id} />
             ))}
           </div>

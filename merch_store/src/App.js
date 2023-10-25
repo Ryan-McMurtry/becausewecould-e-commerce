@@ -10,7 +10,6 @@ import Tour from "./Components/Tour";
 import Videos from "./Components/Videos";
 import Contact from "./Components/Contact";
 import Shop from "./Components/Shop";
-import ShopMusicPage from "./Components/ShopMusicPage"
 import Outerwear from "./Components/Outerwear";
 import Shirts from "./Components/Shirts"
 import Hoodies from "./Components/Hoodies"
@@ -27,7 +26,6 @@ function App() {
         <Routes className="app-routes">
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/shop/music" element={<ShopMusicPage />} />
           <Route path="/shop/hats" element={<Hats />} />
           <Route path="/shop/outerwear" element={<Outerwear />} />
           <Route path="/shop/t-shirts" element={<Shirts />} />
