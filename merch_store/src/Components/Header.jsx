@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Cart from "./Cart";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import "98.css";
 import "../Styles/styles.scss";
@@ -20,9 +20,9 @@ function Header() {
       <header className="jumbotron headerStyle">
         <div className="container text-white">
           <h1 className="display-4">
-            <a className="bannerStyle" href="/">
+            <Link className="bannerStyle" to="/">
               Because We Could
-            </a>
+            </Link>
           </h1>
         </div>
 
@@ -32,48 +32,48 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav merchBtnStyle">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/">
                     <button className="btnStyle">
                       Home <span className="sr-only">(current)</span>
                     </button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="/shop">
+                  <Link className="nav-link" to="/shop">
                     <button className="btnStyle">
                       All <span className="sr-only">(current)</span>
                     </button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item active">
-                  <a className="nav-link" href="/shop/hats">
+                  <Link className="nav-link" to="/shop/hats">
                     <button className="btnStyle">Hats</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/shop/outerwear">
+                  <Link className="nav-link" to="/shop/outerwear">
                     <button className="btnStyle">Outerwear</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/shop/t-shirts">
+                  <Link className="nav-link" to="/shop/t-shirts">
                     <button className="btnStyle">T-Shirts</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/shop/hoodies">
+                  <Link className="nav-link" to="/shop/hoodies">
                     <button className="btnStyle">Hoodies</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/shop/sweatshirts">
+                  <Link className="nav-link" to="/shop/sweatshirts">
                     <button className="btnStyle">Sweatshirts</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/shop/bottoms">
+                  <Link className="nav-link" to="/shop/bottoms">
                     <button className="btnStyle">Bottoms</button>
-                  </a>
+                  </Link>
                 </li>
                 <div>
                   <li className="nav-item cartBtn">
@@ -98,9 +98,9 @@ function Header() {
       <header className="jumbotron headerStyle">
         <div className="container text-white">
           <h1 className="display-4">
-            <a className="bannerStyle" href="/">
+            <Link className="bannerStyle" to="/">
               Because We Could
-            </a>
+            </Link>
           </h1>
         </div>
 
@@ -110,31 +110,31 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav merchBtnStyle">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/">
                     <button className="btnStyle">
                       Home <span className="sr-only">(current)</span>
                     </button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/tour">
+                  <Link className="nav-link" to="/tour">
                     <button className="btnStyle">Tour</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/videos">
+                  <Link className="nav-link" to="/videos">
                     <button className="btnStyle">Videos</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/contact">
+                  <Link className="nav-link" to="/contact">
                     <button className="btnStyle">Contact</button>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/shop">
+                  <Link className="nav-link" to= "/shop" href="/shop">
                     <button className="btnStyle">Shop</button>
-                  </a>
+                  </Link>
                 </li>
                 <div>
                   <li className="nav-item cartBtn">
