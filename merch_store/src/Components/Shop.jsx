@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useFetch from "./Hooks/useFetch";
 import MerchList from "./MerchList";
+import Pagination from "./Pagination";
 
 function Shop() {
   const { data, loading, error } = useFetch("/items?populate=*");
@@ -16,14 +17,20 @@ function Shop() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
   }, []);
 
-  
   return (
     <>
       <div className="container shopList">
         <MerchList currentItems={currentItems} />
+        <div className="pagination">
+          <Pagination
+            totalItems={data.length}
+            itemsPerPage={itemsPerPage}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
+        </div>
       </div>
     </>
   );
