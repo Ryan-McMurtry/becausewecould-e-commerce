@@ -6,7 +6,6 @@ Current features:
 - Full link and video implementation
 
 To do:
--Add a next page button for the merch list.
 -Add related products slide to product page.
 -Stylize shopping cart.
 -Change background gif.
