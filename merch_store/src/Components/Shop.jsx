@@ -21,8 +21,10 @@ function Shop() {
 
   return (
     <>
-      <div className="container shopList">
-        <MerchList currentItems={currentItems} />
+      <div>
+        <div className="container shopList">
+          <MerchList currentItems={currentItems} />
+        </div>
         <div className="pagination">
           <Pagination
             totalItems={data.length}

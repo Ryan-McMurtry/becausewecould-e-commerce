@@ -8,7 +8,7 @@ function Footer() {
         <div className="footerContent">
           <div className="left">
             <span classname="copyright">
-              &#169; Copyright 2023. All Rights Reserved.
+              &#169; Copyright 2023 Ryan McMurtry. All Rights Reserved.
             </span>
           </div>
           <div className="right">

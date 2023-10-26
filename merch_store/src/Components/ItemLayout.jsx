@@ -24,7 +24,7 @@ function MerchDetails() {
 
   return (
     <div>
-      <div>
+      <div className="productInfo">
         <div data-reflow-type="product">
           <div className="reflow-product d-flex">
             <div className="ref-media">
@@ -130,6 +130,10 @@ function MerchDetails() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="relatedProducts">
+        <h1>RELATED PRODUCTS</h1>
       </div>
     </div>
   );
