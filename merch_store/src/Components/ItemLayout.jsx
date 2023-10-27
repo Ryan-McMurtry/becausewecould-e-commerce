@@ -5,8 +5,9 @@ import useFetch from "./Hooks/useFetch";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/cartReducer";
+import Card from "./Card";
 
-function MerchDetails() {
+function MerchDetails({ prodData }) {
   const itemId = useLocation().pathname;
   const locationId = itemId.split("/");
 
@@ -20,7 +21,23 @@ function MerchDetails() {
   const { data, loading, error } = useFetch(
     `/items/${locationId[2]}?populate=*`
   );
-  console.log(data?.attributes?.sub_categories?.data?.attributes?.title);
+
+
+  const relatedArr = [];
+
+  prodData.filter((product) => {
+    const prodCat = data?.attributes?.sub_categories?.data[0].attributes?.title;
+    const prodId = data?.id;
+    const relatedProd = product?.attributes?.sub_categories?.data[0].attributes?.title;
+    const relatedId = product?.id;
+    if(prodCat === relatedProd && prodId !== relatedId){
+      relatedArr.push(product)
+    }
+  });
+
+
+
+
 
   return (
     <div>
@@ -133,7 +150,9 @@ function MerchDetails() {
       </div>
 
       <div className="relatedProducts">
-        <h1>RELATED PRODUCTS</h1>
+        <div className="indivCards">
+          {relatedArr?.map((item) => <Card item={item} key={item.id} />)}
+        </div>
       </div>
     </div>
   );

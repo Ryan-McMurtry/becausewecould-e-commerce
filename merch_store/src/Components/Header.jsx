@@ -12,8 +12,6 @@ function Header() {
   const items = useSelector((state) => state.cart.items);
 
   const [shop, setShop] = useState(false);
-  const currentUrl = window.location.href;
-  const urlArr = currentUrl.split("/");
 
   const handleShop = () => {
     setShop(!shop)

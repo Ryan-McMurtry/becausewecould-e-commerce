@@ -5,9 +5,8 @@ import "../Styles/styles.scss";
 
 function Body({ currentItems }){
 
-  const { loading } = useFetch("/items?populate=*");
+  const { allData, loading } = useFetch("/items?populate=*");
 
-  console.log(currentItems);
 
     return (
       <>

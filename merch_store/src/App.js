@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
-import ItemLayout from "./Components/ItemLayout";
+import ItemPage from "./Components/ItemPage";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Cart from "./Components/Cart";
@@ -36,7 +36,7 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/item/:itemId" element={<ItemLayout />} />
+          <Route path="/item/:itemId" element={<ItemPage />} />
         </Routes>
         <Footer />
 
