@@ -15,12 +15,16 @@ function Header() {
   const currentUrl = window.location.href;
   const urlArr = currentUrl.split("/");
 
-  if (urlArr.includes("item") || urlArr.includes("shop")) {
+  const handleShop = () => {
+    setShop(!shop)
+  }
+
+  if (shop) {
     return (
       <header className="jumbotron headerStyle">
         <div className="container text-white">
           <h1 className="display-4">
-            <Link className="bannerStyle" to="/">
+            <Link className="bannerStyle" to="/" onClick={handleShop}>
               Because We Could
             </Link>
           </h1>
@@ -32,7 +36,7 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav merchBtnStyle">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/" onClick={handleShop}>
                     <button className="btnStyle">
                       Home <span className="sr-only">(current)</span>
                     </button>
@@ -132,7 +136,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to= "/shop" href="/shop">
+                  <Link className="nav-link" to="/shop" onClick={handleShop}>
                     <button className="btnStyle">Shop</button>
                   </Link>
                 </li>
