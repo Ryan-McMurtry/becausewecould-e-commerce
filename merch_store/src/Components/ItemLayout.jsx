@@ -37,8 +37,6 @@ function MerchDetails({ prodData }) {
 
 
 
-
-
   return (
     <div>
       <div className="productInfo">

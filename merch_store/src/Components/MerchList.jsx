@@ -5,7 +5,7 @@ import "../Styles/styles.scss";
 
 function Body({ currentItems }){
 
-  const { allData, loading } = useFetch("/items?populate=*");
+  const { loading } = useFetch("/items?populate=*");
 
 
     return (
