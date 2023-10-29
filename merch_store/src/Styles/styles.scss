@@ -116,7 +116,7 @@ body {
 
 
 .shopList {
-  margin-right: 34.35em;
+  margin-right: 34.65em;
 }
 
 .card img {
@@ -228,10 +228,16 @@ body {
 
 
 .relatedProducts {
-  display: flex;
   justify-content: center;
   margin-top: 40em;
-  margin-right: 6.6em;
+  margin-right: 25em;
+  margin-left: 20.5em;
+}
+
+.relatedCards {
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
 }
 
 /* SHOPPING CART */

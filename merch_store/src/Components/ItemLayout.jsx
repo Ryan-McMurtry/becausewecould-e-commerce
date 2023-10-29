@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ShoppingCart } from "phosphor-react";
 import useFetch from "./Hooks/useFetch";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/cartReducer";
 import Card from "./Card";
@@ -11,10 +11,6 @@ function MerchDetails({ prodData }) {
   const itemId = useLocation().pathname;
   const locationId = itemId.split("/");
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
@@ -22,20 +18,18 @@ function MerchDetails({ prodData }) {
     `/items/${locationId[2]}?populate=*`
   );
 
-
   const relatedArr = [];
 
   prodData.filter((product) => {
     const prodCat = data?.attributes?.sub_categories?.data[0].attributes?.title;
     const prodId = data?.id;
-    const relatedProd = product?.attributes?.sub_categories?.data[0].attributes?.title;
+    const relatedProd =
+      product?.attributes?.sub_categories?.data[0].attributes?.title;
     const relatedId = product?.id;
-    if(prodCat === relatedProd && prodId !== relatedId){
-      relatedArr.push(product)
+    if (prodCat === relatedProd && prodId !== relatedId) {
+      relatedArr.push(product);
     }
   });
-
-
 
   return (
     <div>
@@ -148,8 +142,18 @@ function MerchDetails({ prodData }) {
       </div>
 
       <div className="relatedProducts">
-        <div className="indivCards">
-          {relatedArr?.map((item) => <Card item={item} key={item.id} />)}
+        <h1>RELATED PRODUCTS</h1>
+
+        <div className="relatedCards">
+          {relatedArr?.map((item) => (
+            <div
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              <Card item={item} key={item.id} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
