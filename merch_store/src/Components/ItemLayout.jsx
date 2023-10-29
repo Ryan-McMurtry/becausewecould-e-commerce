@@ -6,12 +6,21 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/cartReducer";
 import Card from "./Card";
+import Pagination from "./Pagination";
+import RelatedProducts from "./RelatedProducts";
 
 function MerchDetails({ prodData }) {
   const itemId = useLocation().pathname;
   const locationId = itemId.split("/");
 
   const [quantity, setQuantity] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+
+  const lastItemIndex = currentPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
+
+  
   const dispatch = useDispatch();
 
   const { data, loading, error } = useFetch(
@@ -19,6 +28,7 @@ function MerchDetails({ prodData }) {
   );
 
   const relatedArr = [];
+ 
 
   prodData.filter((product) => {
     const prodCat = data?.attributes?.sub_categories?.data[0].attributes?.title;
@@ -30,6 +40,8 @@ function MerchDetails({ prodData }) {
       relatedArr.push(product);
     }
   });
+
+  const currentItems = relatedArr.slice(firstItemIndex, lastItemIndex);
 
   return (
     <div>
@@ -142,18 +154,15 @@ function MerchDetails({ prodData }) {
       </div>
 
       <div className="relatedProducts">
-        <h1>RELATED PRODUCTS</h1>
-
-        <div className="relatedCards">
-          {relatedArr?.map((item) => (
-            <div
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}
-            >
-              <Card item={item} key={item.id} />
-            </div>
-          ))}
+        <h2 className="rpTitle">RELATED PRODUCTS</h2>
+        <RelatedProducts currentItems={currentItems} />
+        <div className="rpPagination">
+          <Pagination
+            totalItems={relatedArr.length}
+            itemsPerPage={itemsPerPage}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
         </div>
       </div>
     </div>

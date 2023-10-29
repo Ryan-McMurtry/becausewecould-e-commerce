@@ -163,6 +163,10 @@ body {
 
 /* ITEM PAGE */
 
+.productInfo {
+  margin-left: .3em;
+}
+
 .itemPageFont {
   font-size: 2em;
   font-family: "Times New Roman", Times, serif;
@@ -229,7 +233,7 @@ body {
 
 .relatedProducts {
   justify-content: center;
-  margin-top: 40em;
+  margin-top: 36em;
   margin-right: 25em;
   margin-left: 20.5em;
 }
@@ -238,7 +242,19 @@ body {
   margin-top: 5em;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
+  block-size: max-content;
 }
+
+.rpTitle {
+  font-family: "VT323", monospace;
+  border-style: groove;
+  border-color: rgb(59, 58, 58);
+  background-color: rgb(204, 204, 204);
+  border-radius: 7px;
+  padding: .2em;
+}
+
+
 
 /* SHOPPING CART */
 
@@ -466,6 +482,24 @@ body {
 }
 
 .paginationBtn button.active{
+  font-weight: 900;
+  border-color: black;
+  background-color: beige;
+  color: orange;
+}
+
+.rpPagination {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.rpPaginationBtn button {
+  font-weight: 600;
+  padding: 1em;
+  margin-right: .5em;
+}
+
+.rpPaginationBtn button.active{
   font-weight: 900;
   border-color: black;
   background-color: beige;
