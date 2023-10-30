@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useSelector } from "react-redux";
 import {Link} from "react-router-dom";
 import { removeItem, resetCart } from "../Redux/cartReducer";
@@ -10,7 +10,8 @@ import { loadStripe } from "@stripe/stripe-js";
 function Cart() {
   const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
-
+  const [close, setClose] = useState(false);
+ 
 
   const stripePromise = loadStripe(
     "pk_test_51NmEGSBocVtywriia3FsklGNP6BCgBy50jQs9iRNHax4XqVvtlFP6KdMZbbVFdEfINVpZ3G4SHOEiTCxKzlxJ40300CBWrPNW8"
@@ -54,10 +55,18 @@ function Cart() {
     }
   };
 
-  if (items.length > 0) {
+  if (items.length > 0 && !close) {
     return (
       <div className="cart">
         <div className="cartContent">
+          <button
+            className="xBtn"
+            onClick={() => {
+              setClose(!close);
+            }}
+          >
+            &#x2715;
+          </button>
           <h1>Items in your cart</h1>
           {items?.map((item) => (
             <div className="cartItem" key={item.id}>
@@ -94,7 +103,7 @@ function Cart() {
         </div>
       </div>
     );
-  } else {
+  } else if (items.length == 0 && !close) {
     return (
       <div className="cart">
         <h1 className="emptyText">Your cart is empty</h1>

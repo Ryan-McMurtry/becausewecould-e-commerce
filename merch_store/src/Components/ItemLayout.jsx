@@ -21,6 +21,7 @@ function MerchDetails({ prodData }) {
   const firstItemIndex = lastItemIndex - itemsPerPage;
 
   const dispatch = useDispatch();
+  
   const refresh = true;
 
   const { data, loading, error } = useFetch(

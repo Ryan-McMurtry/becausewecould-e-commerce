@@ -20,7 +20,6 @@ function Shop() {
   }, []);
 
   return (
-    <>
       <div>
         <div className="container shopList">
           <MerchList currentItems={currentItems} />
@@ -34,7 +33,6 @@ function Shop() {
           />
         </div>
       </div>
-    </>
   );
 }
 export default Shop;

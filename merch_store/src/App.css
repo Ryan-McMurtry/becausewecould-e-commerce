@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(253, 251, 249, 0.856);
+  background-image: url("./images/sf3-3rd-strike-yang-stage-hongkong.gif");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.98;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 

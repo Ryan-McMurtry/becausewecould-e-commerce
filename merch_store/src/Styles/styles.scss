@@ -6,18 +6,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-  background-color: rgba(253, 251, 249, 0.856);
-  background-image: url("../images/sf3-3rd-strike-yang-stage-hongkong.gif");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.98;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
 
 /* NAVBAR & HEADER */
 
@@ -85,7 +73,7 @@ body {
 /* FOOTER */
 
 .footer {
-  margin: 80% 0px 20px 0px;
+  margin-top: auto;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 
@@ -116,7 +104,7 @@ body {
 
 
 .shopList {
-  margin-right: 34.65em;
+  margin-right: 33.8em;
 }
 
 .card img {
@@ -130,9 +118,9 @@ body {
 }
 
 .indivCards {
-  height: 50em;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
+  margin-bottom: 3em;
 }
 
 .cardStyle {
@@ -233,7 +221,7 @@ body {
 
 .relatedProducts {
   justify-content: center;
-  margin-top: 36em;
+  margin-top: 32em;
   margin-right: 25em;
   margin-left: 20.5em;
 }
@@ -264,7 +252,7 @@ body {
   padding: auto;
   height: 100%;
   right: 1px;
-  top: 186px;
+  top: 10px;
   z-index: 999;
 
   display: flex;
@@ -282,6 +270,12 @@ body {
 
   animation-duration: 1.5s;
   animation-name: slidein;
+}
+
+.xBtn {
+  position: relative;
+  font-size: 0.6em;
+  margin-top: 1.5em;
 }
 
 @keyframes slidein {
@@ -365,7 +359,7 @@ body {
 /* SUB CATEGORIES PAGE */
 
 .sub_categories {
-  margin-left: 32em;
+  margin-left: 30.3em;
   display: flex;
   flex-direction: row;
   width: 93.75em;
@@ -398,6 +392,7 @@ body {
 }
 
 .icons {
+  
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -429,7 +424,8 @@ body {
 
 .videoContainer {
   margin-top: 23em;
-  position: absolute;
+  margin-bottom: 5em;
+  position: relative;
   right: 30.15em;
   display: flex;
   justify-content: center;
@@ -462,17 +458,19 @@ body {
   border-radius: 7px;
   padding-top: .5em;
   position: absolute;
+  z-index: 2;
   left: 15em;
-  top: 83.25em;
+  top: 86em;
 
 }
 
 
 // PAGINATION
 .pagination {
-  position: absolute;
+  position: relative;
   top: 245%;
-  left: 32.7em;
+  left: 32.15em;
+  margin-bottom: 2em;
 }
 
 .paginationBtn button {
@@ -491,6 +489,7 @@ body {
 .rpPagination {
   position: relative;
   margin-top: 1.5em;
+  margin-bottom: 2em;
 }
 
 .rpPaginationBtn button {
