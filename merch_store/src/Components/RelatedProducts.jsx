@@ -1,7 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import Card from "./Card";
-import Pagination from "./Pagination";
+
 
 
 const RelatedProducts = ({ currentItems }) => {

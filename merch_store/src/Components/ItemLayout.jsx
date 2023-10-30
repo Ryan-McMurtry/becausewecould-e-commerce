@@ -20,15 +20,14 @@ function MerchDetails({ prodData }) {
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
 
-  
   const dispatch = useDispatch();
+  const refresh = true;
 
   const { data, loading, error } = useFetch(
     `/items/${locationId[2]}?populate=*`
   );
 
   const relatedArr = [];
- 
 
   prodData.filter((product) => {
     const prodCat = data?.attributes?.sub_categories?.data[0].attributes?.title;
@@ -162,6 +161,7 @@ function MerchDetails({ prodData }) {
             itemsPerPage={itemsPerPage}
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}
+            refresh={refresh}
           />
         </div>
       </div>

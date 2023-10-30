@@ -5,11 +5,18 @@ const Pagination = ({
   itemsPerPage,
   setCurrentPage,
   currentPage,
+  refresh
 }) => {
   let pages = [];
 
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pages.push(i);
+  }
+
+  const refreshHandler = () => {
+    if(!refresh) {
+      window.scrollTo(0, 0);
+    }
   }
 
   return (
@@ -21,7 +28,7 @@ const Pagination = ({
               key={index}
               onClick={() => {
                 setCurrentPage(page);
-                window.scrollTo(0, 0);
+                refreshHandler()
               }}
               className={page == currentPage ? "active" : ""}
             >
