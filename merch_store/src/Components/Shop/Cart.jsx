@@ -1,17 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import {Link} from "react-router-dom";
-import { removeItem, resetCart } from "../Redux/cartReducer";
+import { Link } from "react-router-dom";
+import { removeItem, resetCart } from "../../Redux/cartReducer";
 import { useDispatch } from "react-redux";
-import { makeRequest } from "../makeRequests";
+import { makeRequest } from "../../makeRequests";
 import { loadStripe } from "@stripe/stripe-js";
-
 
 function Cart() {
   const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const [close, setClose] = useState(false);
- 
 
   const stripePromise = loadStripe(
     "pk_test_51NmEGSBocVtywriia3FsklGNP6BCgBy50jQs9iRNHax4XqVvtlFP6KdMZbbVFdEfINVpZ3G4SHOEiTCxKzlxJ40300CBWrPNW8"

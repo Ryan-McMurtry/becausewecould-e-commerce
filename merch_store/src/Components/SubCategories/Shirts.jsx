@@ -1,20 +1,20 @@
 import React from "react";
-import Card from "./Card";
 import { useEffect } from "react";
-import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.scss";
+import Card from "../Layout/Card";
+import useFetch from "../Hooks/useFetch";
+import "../../Styles/styles.scss";
 
-function Sweatshirts() {
+function Shirts() {
   const { data, loading, error } = useFetch("/items?populate=*");
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filterArr = [];
   data.filter((item) => {
     const subCatData = item?.attributes?.sub_categories?.data;
-    if (subCatData[0].attributes?.title == "Sweatshirts") {
+    if (subCatData[0].attributes?.title == "T-Shirts") {
       filterArr.push(item);
     }
   });
@@ -34,4 +34,4 @@ function Sweatshirts() {
   );
 }
 
-export default Sweatshirts;
+export default Shirts;

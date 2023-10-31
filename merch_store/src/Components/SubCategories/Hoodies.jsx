@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
-import Card from "./Card";
-import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.scss";
+import Card from "../Layout/Card";
+import useFetch from "../Hooks/useFetch";
+import "../../Styles/styles.scss";
 
 function Hoodies() {
   const { data, loading, error } = useFetch("/items?populate=*");

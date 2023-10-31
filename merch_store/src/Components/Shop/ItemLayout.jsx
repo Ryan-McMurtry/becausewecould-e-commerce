@@ -1,12 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { ShoppingCart } from "phosphor-react";
-import useFetch from "./Hooks/useFetch";
+import useFetch from "../Hooks/useFetch";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/cartReducer";
-import Card from "./Card";
-import Pagination from "./Pagination";
+import { addToCart } from "../../Redux/cartReducer";
+import Pagination from "../../Tools/Pagination";
 import RelatedProducts from "./RelatedProducts";
 
 function MerchDetails({ prodData }) {
@@ -21,7 +20,7 @@ function MerchDetails({ prodData }) {
   const firstItemIndex = lastItemIndex - itemsPerPage;
 
   const dispatch = useDispatch();
-  
+
   const refresh = true;
 
   const { data, loading, error } = useFetch(

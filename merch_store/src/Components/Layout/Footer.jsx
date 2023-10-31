@@ -1,6 +1,6 @@
 import React from "react";
-import stripeImg from "../images/payment-logo.jpg"
-import "../Styles/styles.scss";
+import stripeImg from "../../images/payment-logo.jpg"
+import "../../Styles/styles.scss";
 
 function Footer() {
     return (

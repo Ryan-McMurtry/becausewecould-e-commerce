@@ -1,19 +1,16 @@
 import React from "react";
-import {useEffect} from "react";
-import Card from "./Card";
+import { useEffect } from "react";
+import Card from "./Layout/Card";
 import useFetch from "./Hooks/useFetch";
-import Slider from "./Slider";
-import ReactVideoPlayer from "./ReactVideoPlayer";
+import Slider from "../Tools/Slider";
+import ReactVideoPlayer from "../Tools/ReactVideoPlayer";
 
 import "../Styles/styles.scss";
 
 function Home() {
-
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
 
   const { data, loading, error } = useFetch("/items?populate=*");
   const filterArr = new Array();

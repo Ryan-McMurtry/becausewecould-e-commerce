@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import useFetch from "./Hooks/useFetch";
+import useFetch from "../Hooks/useFetch";
 import MerchList from "./MerchList";
-import Pagination from "./Pagination";
+import Pagination from "../../Tools/Pagination";
 
 function Shop() {
   const { data, loading, error } = useFetch("/items?populate=*");
@@ -20,19 +20,19 @@ function Shop() {
   }, []);
 
   return (
-      <div>
-        <div className="container shopList">
-          <MerchList currentItems={currentItems} />
-        </div>
-        <div className="pagination">
-          <Pagination
-            totalItems={data.length}
-            itemsPerPage={itemsPerPage}
-            setCurrentPage={setCurrentPage}
-            currentPage={currentPage}
-          />
-        </div>
+    <div>
+      <div className="container shopList">
+        <MerchList currentItems={currentItems} />
       </div>
+      <div className="pagination">
+        <Pagination
+          totalItems={data.length}
+          itemsPerPage={itemsPerPage}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        />
+      </div>
+    </div>
   );
 }
 export default Shop;

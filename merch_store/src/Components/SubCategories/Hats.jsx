@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
-import Card from "./Card";
-import useFetch from "./Hooks/useFetch";
-import "../Styles/styles.scss";
+import Card from "../Layout/Card";
+import useFetch from "../Hooks/useFetch";
+import "../../Styles/styles.scss";
 
-function Outerwear() {
+function Hats() {
   const { data, loading, error } = useFetch("/items?populate=*");
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Outerwear() {
   const filterArr = [];
   data.filter((item) => {
     const subCatData = item?.attributes?.sub_categories?.data;
-    if (subCatData[0].attributes?.title == "Outerwear") {
+    if (subCatData[0].attributes?.title == "Hats") {
       filterArr.push(item);
     }
   });
@@ -22,16 +22,14 @@ function Outerwear() {
   return (
     <>
       <div className="sub_categories">
-        <div>
-          <div className="indivCards">
-            {loading
-              ? "Loading"
-              : filterArr?.map((item) => <Card item={item} key={item.id} />)}
-          </div>
+        <div className="indivCards">
+          {loading
+            ? "Loading"
+            : filterArr?.map((item) => <Card item={item} key={item.id} />)}
         </div>
       </div>
     </>
   );
 }
 
-export default Outerwear;
+export default Hats;

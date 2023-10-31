@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import useFetch from "./Hooks/useFetch";
+import useFetch from "../Hooks/useFetch";
 import MerchDetails from "./ItemLayout";
-import "../Styles/styles.scss";
+import "../../Styles/styles.scss";
 
 const ItemPage = () => {
   const { data, loading, error } = useFetch("/items?populate=*");

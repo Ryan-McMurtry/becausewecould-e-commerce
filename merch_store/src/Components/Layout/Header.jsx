@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import Cart from "./Cart";
+import Cart from "../Shop/Cart";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import "98.css";
-import "../Styles/styles.scss";
+import "../../Styles/styles.scss";
 import { useSelector } from "react-redux";
 
 function Header() {
@@ -14,8 +14,8 @@ function Header() {
   const [shop, setShop] = useState(false);
 
   const handleShop = () => {
-    setShop(!shop)
-  }
+    setShop(!shop);
+  };
 
   if (shop) {
     return (
