@@ -36,7 +36,7 @@ function Home() {
           <div className="featuredTitle">
             <h2>Featured:</h2>
           </div>
-          <div className="indivCards">
+          <div className="indivCards ftMargin">
             {loading
               ? "Loading"
               : filterArr?.map((item) => <Card item={item} key={item.id} />)}
