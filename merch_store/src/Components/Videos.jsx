@@ -4,6 +4,9 @@ function Videos() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+// youtube/instagram layout
+
   return <h1>Videos</h1>;
 }
 
