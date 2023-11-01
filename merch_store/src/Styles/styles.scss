@@ -274,7 +274,7 @@ html {
 
 .xBtn {
   position: relative;
-  font-size: 0.6em;
+  font-size: 0.5em;
   margin-top: 1.5em;
 }
 
@@ -302,8 +302,9 @@ html {
 }
 
 .cartItem img {
-  width: 17em;
-  height: 25em;
+  object-fit: fill;
+  width: 16em;
+  height: 20em;
   border-style: ridge;
   border-color: black;
 }
