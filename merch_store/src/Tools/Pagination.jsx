@@ -30,7 +30,7 @@ const Pagination = ({
                 setCurrentPage(page);
                 refreshHandler()
               }}
-              className={page == currentPage ? "active" : ""}
+              className={page === currentPage ? "active" : ""}
             >
               {page}
             </button>
