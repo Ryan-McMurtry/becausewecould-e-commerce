@@ -6,6 +6,7 @@ function Videos() {
   }, []);
 
 // youtube/instagram layout
+// add title/description and link to video
 
   return <h1>Videos</h1>;
 }
