@@ -15,7 +15,7 @@ html {
     rgba(0, 0, 0, 0.5),
     rgba(88, 100, 136, 0)
   );
-  padding: 0.5em;
+  padding: 1.5em;
 }
 
 .navbarStyle {
@@ -27,7 +27,7 @@ html {
 .bannerStyle {
   font-family: "VT323", monospace;
   font-size: 1.2em;
-  margin: 1.2em;
+  margin: .95em;
   color: white;
   margin-right: 1.56em;
 }
@@ -446,6 +446,18 @@ html {
   object-fit: cover;
   padding: 0;
   margin: 0;
+}
+
+.videoPageContainer {
+  margin-top: 8em;
+  margin-bottom: 25em;
+  position: relative;
+  right: 30.55em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 
 

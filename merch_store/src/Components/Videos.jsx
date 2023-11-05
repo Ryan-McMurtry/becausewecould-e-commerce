@@ -1,6 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
-function Videos() {
+import ReactPlayer from "react-player";
+import { Container } from "@mui/material";
+
+
+const Videos = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -8,7 +12,55 @@ function Videos() {
 // youtube/instagram layout
 // add title/description and link to video
 
-  return <h1>Videos</h1>;
+  return (
+    <div>
+      <div className="videoPageContainer">
+        <Container maxWidth="md" justify="center">
+          <div className="playerWrapper">
+            <ReactPlayer
+              controls={true}
+              className="player"
+              url="https://www.youtube.com/watch?v=_ZCKU4SellU"
+              width="80vw"
+              height="86vh"
+              playing={false}
+              muted={true}
+            />
+          </div>
+        </Container>
+      </div>
+      <div className="videoPageContainer">
+        <Container maxWidth="md" justify="center">
+          <div className="playerWrapper">
+            <ReactPlayer
+              controls={true}
+              className="player"
+              url="https://www.youtube.com/watch?v=AzyR4biyb5s"
+              width="80vw"
+              height="86vh"
+              playing={false}
+              muted={true}
+            />
+          </div>
+        </Container>
+      </div>
+      <div className="videoPageContainer">
+        <Container maxWidth="md" justify="center">
+          <div className="playerWrapper">
+            <ReactPlayer
+              controls={true}
+              className="player"
+              url="https://www.youtube.com/watch?v=ews67bQn1w8"
+              width="80vw"
+              height="86vh"
+              playing={false}
+              muted={true}
+            />
+          </div>
+        </Container>
+      </div>
+    </div>
+  );
 }
 
 export default Videos;
