@@ -9,7 +9,6 @@ const Videos = () => {
     window.scrollTo(0, 0);
   }, []);
 
-// youtube/instagram layout
 // add title/description and link to video
 
   return (
