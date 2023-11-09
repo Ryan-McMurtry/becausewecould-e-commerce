@@ -8,10 +8,10 @@ module.exports = ({ env }) => ({
   dirs: {
     public: "/data/public",
   },
-  path: "/admin",
-  build: {
-    backend: env("ADMIN_BUILD_BACKEND", "https://becausewecould.com"),
-  },
+  // path: "/admin",
+  // build: {
+  //   backend: env("ADMIN_BUILD_BACKEND", "https://becausewecould.com"),
+  // },
   webhooks: {
     populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
   },
