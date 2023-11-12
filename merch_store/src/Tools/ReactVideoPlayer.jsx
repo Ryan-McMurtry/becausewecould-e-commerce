@@ -12,7 +12,7 @@ const ReactVideoPlayer = () => {
             <ReactPlayer
               controls={true}
               className="player"
-              url="https://www.youtube.com/watch?v=EBcbiS7tfJw&ab_channel=8RO8"
+              url="https://www.youtube.com/watch?v=8OlkSUatHsE"
               width="80vw"
               height="86vh"
               playing={true}
