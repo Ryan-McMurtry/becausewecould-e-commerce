@@ -80,7 +80,7 @@ function Header() {
                 <div>
                   <li className="nav-item cartBtn">
                     <a className="nav-link" onClick={() => setOpen(!open)}>
-                      <ShoppingCart size={35} />
+                      <ShoppingCart className="carticon" size={35} />
                     </a>
                     {items.length > 0 ? (
                       <span className="cartAmount">{items.length}</span>
@@ -141,7 +141,7 @@ function Header() {
                 <div>
                   <li className="nav-item cartBtn">
                     <a className="nav-link" onClick={() => setOpen(!open)}>
-                      <ShoppingCart size={35} />
+                      <ShoppingCart className="carticon" size={35} />
                     </a>
                     {items.length > 0 ? (
                       <span className="cartAmount">{items.length}</span>
