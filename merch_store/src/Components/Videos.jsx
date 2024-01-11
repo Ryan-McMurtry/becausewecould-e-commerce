@@ -12,7 +12,7 @@ const Videos = () => {
 // add title/description and link to video
 
   return (
-    <div>
+    <div className="centerVid">
       <div className="videoPageContainer">
         <Container maxWidth="md" justify="center">
           <div className="playerWrapper">
